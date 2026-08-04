@@ -1,0 +1,88 @@
+---
+---
+
+@use 'abstracts/variables' with (
+  $theme: '{{ site.theme_mode }}'
+);
+
+/* prettier-ignore */
+@use 'main
+{%- if jekyll.environment == 'production' -%}
+  .bundle
+{%- endif -%}
+';
+
+{% assign ui_font = site.fonts.ui %}
+{% assign post_title_font = site.fonts.post_title %}
+{% assign header_font = site.fonts.header %}
+{% assign body_font = site.fonts.body %}
+
+{% if ui_font.family and ui_font.path %}
+@font-face {
+  font-family: '{{ ui_font.family }}';
+  src: url('{{ ui_font.path | relative_url }}') format('truetype');
+  font-display: swap;
+}
+{% endif %}
+
+{% if post_title_font.family and post_title_font.path %}
+@font-face {
+  font-family: '{{ post_title_font.family }}';
+  src: url('{{ post_title_font.path | relative_url }}') format('truetype');
+  font-display: swap;
+}
+{% endif %}
+
+{% if header_font.family and header_font.path %}
+@font-face {
+  font-family: '{{ header_font.family }}';
+  src: url('{{ header_font.path | relative_url }}') format('truetype');
+  font-display: swap;
+}
+{% endif %}
+
+{% if body_font.family and body_font.path %}
+@font-face {
+  font-family: '{{ body_font.family }}';
+  src: url('{{ body_font.path | relative_url }}') format('truetype');
+  font-display: swap;
+}
+{% endif %}
+
+{% assign ui_fallback = ui_font.fallback | default: 'Source Sans Pro, Microsoft Yahei, sans-serif' %}
+{% assign post_title_fallback = post_title_font.fallback | default: 'Lato, Microsoft Yahei, sans-serif' %}
+{% assign header_fallback = header_font.fallback | default: 'Lato, Microsoft Yahei, sans-serif' %}
+{% assign body_fallback = body_font.fallback | default: 'Source Sans Pro, Microsoft Yahei, sans-serif' %}
+
+:root {
+  --site-font-ui: {% if ui_font.family and ui_font.path %}'{{ ui_font.family }}', {% endif %}{{ ui_fallback }};
+  --site-font-post-title: {% if post_title_font.family and post_title_font.path %}'{{ post_title_font.family }}', {% endif %}{{ post_title_fallback }};
+  --site-font-header: {% if header_font.family and header_font.path %}'{{ header_font.family }}', {% endif %}{{ header_fallback }};
+  --site-font-body: {% if body_font.family and body_font.path %}'{{ body_font.family }}', {% endif %}{{ body_fallback }};
+}
+
+body {
+  font-family: var(--site-font-ui);
+}
+
+article > header h1,
+#post-list .card-title,
+#toc-bar .label,
+#toc-popup .header .label {
+  font-family: var(--site-font-post-title);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+.dynamic-title,
+.panel-heading,
+#topbar-title {
+  font-family: var(--site-font-header);
+}
+
+.content {
+  font-family: var(--site-font-body);
+}

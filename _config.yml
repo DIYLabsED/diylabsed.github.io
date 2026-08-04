@@ -100,6 +100,26 @@ cdn:
 # the avatar on sidebar, support local or CORS resources
 avatar: assets/img/nere-square.png
 
+# Custom site fonts. Put .ttf files under `assets/fonts/` and set each `path`
+# to the matching file. Leave `family` or `path` empty to use the fallback.
+fonts:
+  ui:
+    family:
+    path:
+    fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
+  post_title:
+    family:
+    path:
+    fallback: "Lato, Microsoft Yahei, sans-serif"
+  header:
+    family:
+    path:
+    fallback: "Lato, Microsoft Yahei, sans-serif"
+  body:
+    family:
+    path:
+    fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
+
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
 social_preview_image: # string, local or CORS resources
