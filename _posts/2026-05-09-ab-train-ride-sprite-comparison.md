@@ -2,7 +2,6 @@
 title: Aberration Train Ride Sprite Comparison
 description: Comparison between no sprites and yes sprites in a map for Aberration
 date: 2026-05-09 10:05:00 +/-0530
-project_date: 2036-01-17
 categories: [Games, Aberration]
 tags: [aberration]
 unlisted: true
