@@ -104,7 +104,7 @@ avatar: assets/img/nere-square.png
 # to the matching file. Leave `family` or `path` empty to use the fallback.
 fonts:
   ui:
-    family:
+    family: 
     path:
     fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
   post_title:
@@ -112,8 +112,8 @@ fonts:
     path:
     fallback: "Lato, Microsoft Yahei, sans-serif"
   header:
-    family:
-    path:
+    family: "EB Garamond"
+    path: "/assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf"
     fallback: "Lato, Microsoft Yahei, sans-serif"
   body:
     family:
