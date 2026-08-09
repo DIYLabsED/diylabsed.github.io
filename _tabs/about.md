@@ -20,3 +20,5 @@ This website uses the following fonts, all licensed under the [Open Font License
 - UI: [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)
 - Headings: [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
 - Body Text: [Lato](https://fonts.google.com/specimen/Lato)
+
+This website uses [this fanart of Nere](https://x.com/Memo_Foamcake/status/2024801553908158942) by [Memo_Foamcake](https://x.com/Memo_Foamcake).
