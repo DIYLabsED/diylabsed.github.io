@@ -86,3 +86,29 @@ h5,
 .content {
   font-family: var(--site-font-body);
 }
+
+.pikchr-diagram {
+  margin: 1.5rem auto;
+  text-align: center;
+}
+
+.pikchr-diagram svg {
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+.pikchr-diagram details {
+  margin: 0.75rem auto 0;
+  max-width: 48rem;
+  text-align: left;
+}
+
+.pikchr-diagram details pre {
+  margin-top: 0.5rem;
+}
+
+.pikchr-error {
+  color: var(--bs-danger);
+}
