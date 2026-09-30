@@ -1,7 +1,7 @@
 ---
 title: Web Demos
 description: Little web demos/toys
-date: 2026-01-27 18:25:00 +/-0530
+date: 2026-09-30 13:51:00 +/-0530
 categories: [Web Demos]
 tags: [web]
 unlisted: false
