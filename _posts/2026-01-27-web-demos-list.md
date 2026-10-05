@@ -13,3 +13,5 @@ After... five months of wanting to, they're here! Well, for now, just one. A Mar
 Play with it [here](https://DIYLabsED.github.io/web-demos/markov)!
 
 I plan on making more, to play with and learn more about JS.
+
+For other web demos, there's now also a convenient little list of them, accesible via the Web Demos page on the sidebar!

@@ -1,0 +1,7 @@
+- slug: markov
+  title: Markov Chain Generator
+  description: A small JavaScript implementation of a Markov chain with a basic HTML interface.
+  # Optional. Omit this field for a text-only, full-width card.
+  cover: /assets/img/web-demos/markov.svg
+  date: 2026-09-30 13:51:00 +0530
+  published: true
