@@ -6,7 +6,11 @@ layout: page
 <div id="post-list" class="flex-grow-1 px-xl-1">
   {% for demo in site.data.web_demos %}
     {% if demo.published != false %}
-      {% capture demo_url %}/web-demos/{{ demo.slug }}/{% endcapture %}
+      {% if demo.url %}
+        {% assign demo_url = demo.url %}
+      {% else %}
+        {% capture demo_url %}/web-demos/{{ demo.slug }}/{% endcapture %}
+      {% endif %}
       {% include content-card.html item=demo url=demo_url %}
     {% endif %}
   {% endfor %}

@@ -17,7 +17,21 @@
         {% endunless %}
       {% endif %}
 
-      {% if image.lqip %}
+      {% assign image_valid = false %}
+      {% if src contains '://' or src contains 'data:' %}
+        {% assign image_valid = true %}
+      {% else %}
+        {% assign normalized_src = src | remove_first: '/' %}
+        {% for static_file in site.static_files %}
+          {% assign static_path = static_file.relative_path | remove_first: '/' %}
+          {% if static_path == normalized_src %}
+            {% assign image_valid = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+
+      {% if image_valid and image.lqip %}
         {% assign lqip = image.lqip %}
         {% if item.media_subpath %}
           {% unless lqip contains 'data:' %}
@@ -32,17 +46,19 @@
         {% assign lqip_attr = 'lqip="' | append: lqip | append: '"' %}
       {% endif %}
 
-      {% assign alt = image.alt | xml_escape | default: item.title | append: ' cover image' %}
+      {% if image_valid %}
+        {% assign alt = image.alt | xml_escape | default: item.title | append: ' cover image' %}
 
-      <div class="col-md-5">
-        {% if src contains '://' or src contains 'data:' %}
-          <img src="{{ src }}" alt="{{ alt }}" {{ lqip_attr }}>
-        {% else %}
-          <img src="{{ src | relative_url }}" alt="{{ alt }}" {{ lqip_attr }}>
-        {% endif %}
-      </div>
+        <div class="col-md-5">
+          {% if src contains '://' or src contains 'data:' %}
+            <img src="{{ src }}" alt="{{ alt }}" {{ lqip_attr }}>
+          {% else %}
+            <img src="{{ src | relative_url }}" alt="{{ alt }}" {{ lqip_attr }}>
+          {% endif %}
+        </div>
 
-      {% assign card_body_col = '7' %}
+        {% assign card_body_col = '7' %}
+      {% endif %}
     {% endif %}
 
     <div class="col-md-{{ card_body_col }}">
