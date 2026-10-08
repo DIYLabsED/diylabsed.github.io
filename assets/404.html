@@ -1,0 +1,16 @@
+---
+layout: 404
+title: "404: Page not found"
+permalink: /404.html
+toc: false
+---
+
+{% include lang.html %}
+
+<p class="lead">{{ site.data.locales[lang].not_found.statement }}</p>
+
+<div class="error-cat" aria-label="Animated ASCII cat">
+  <ascii-art piece="cat"></ascii-art>
+</div>
+
+<script type="module" src="https://ascii.rest/ascii.js"></script>

@@ -24,6 +24,8 @@ This website uses [Jekyll](https://jekyllrb.com/), and is hosted on [GitHub Page
 
 This website includes [pikchr-wasm](https://github.com/fabiospampinato/pikchr-wasm) 2.0.1 to render Pikchr diagrams in the browser. The wrapper library is licensed under the [MIT License](https://opensource.org/license/mit/); its embedded [Pikchr](https://pikchr.org/home/doc/trunk/homepage.md) implementation is released under the zero-clause BSD license. The applicable license text is included with the bundled renderer in [`assets/js/pikchr/LICENSE`](/assets/js/pikchr/LICENSE).
 
+The 404 page uses the ASCII art cat from [ascii.rest](https://ascii.rest/cat/) by [bas3line](https://github.com/bas3line).
+
 ### Fonts
 This website uses the following fonts, all licensed under the [Open Font License](https://openfontlicense.org/open-font-license-official-text/):
 - UI: [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)

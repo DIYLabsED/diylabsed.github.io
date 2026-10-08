@@ -112,3 +112,40 @@ h5,
 .pikchr-error {
   color: var(--bs-danger);
 }
+
+#error-page main {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+#error-page #main-wrapper {
+  margin-left: 0;
+}
+
+#error-page article {
+  width: 100%;
+  max-width: 48rem;
+}
+
+#error-page .error-cat {
+  display: flex;
+  justify-content: center;
+  margin: 4rem auto 2rem;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+#error-page ascii-art {
+  display: block;
+  flex: 0 0 auto;
+  min-width: max-content;
+}
+
+#error-page #sidebar-trigger {
+  display: none;
+}
+
+#error-page #tail-wrapper {
+  padding-right: 1.5rem !important;
+}
