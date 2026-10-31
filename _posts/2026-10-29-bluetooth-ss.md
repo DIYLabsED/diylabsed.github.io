@@ -5,7 +5,7 @@ date: 2026-10-30 00:00:00 +0530
 project_date: 2026-10-10 00:00:00 +0530
 categories: [Electronics, Hardware Mods]
 tags: [sound, audio, phillips, hardware]
-unlisted: false
+unlisted: true
 ---
 
 ![Reassembled sound system](/assets/img/post_imgs/ss_bl_mod/ss_assembled.jpg){: width="972" height="589" .w-50}
