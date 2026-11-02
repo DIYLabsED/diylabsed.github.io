@@ -95,24 +95,34 @@ cdn:
 # the avatar on sidebar, support local or CORS resources
 avatar: assets/img/nere-square.png
 
-# Custom site fonts. Put .ttf files under `assets/fonts/` and set each `path`
-# to the matching file. Leave `family` or `path` empty to use the fallback.
+# Custom site fonts. Put webfont files under `assets/fonts/` and set each
+# `path` to the matching file. Leave `family` or `path` empty to use fallback.
 fonts:
   ui:
-    family: 
-    path:
+    family: "Iosevka"
+    path: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Medium.woff"
     fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
+    weights:
+      100: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Thin.woff"
+      200: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-ExtraLight.woff"
+      300: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Light.woff"
+      400: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Regular.woff"
+      500: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Medium.woff"
+      600: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-SemiBold.woff"
+      700: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Bold.woff"
+      800: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-ExtraBold.woff"
+      900: "/assets/fonts/PkgTTC-SGr-Iosevka-34.9.1/SGr-Iosevka-Heavy.woff"
   post_title:
-    family:
-    path:
+    family: "Iosevka Etoile"
+    path: "/assets/fonts/PkgTTC-IosevkaEtoile-34.9.1/IosevkaEtoile-Regular.woff"
     fallback: "Lato, Microsoft Yahei, sans-serif"
   header:
-    family: "EB Garamond"
-    path: "/assets/fonts/EB_Garamond/static/EBGaramond-Regular.ttf"
+    family: "Iosevka Etoile"
+    path: "/assets/fonts/PkgTTC-IosevkaEtoile-34.9.1/IosevkaEtoile-Regular.woff"
     fallback: "Lato, Microsoft Yahei, sans-serif"
   body:
-    family:
-    path:
+    family: "Iosevka Aile"
+    path: "/assets/fonts/PkgTTC-IosevkaAile-34.9.1/IosevkaAile-Regular.woff"
     fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.

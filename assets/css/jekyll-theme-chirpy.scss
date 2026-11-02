@@ -17,18 +17,38 @@
 {% assign header_font = site.fonts.header %}
 {% assign body_font = site.fonts.body %}
 
+{% assign ui_font_format = 'truetype' %}
+{% assign post_title_font_format = 'truetype' %}
+{% assign header_font_format = 'truetype' %}
+{% assign body_font_format = 'truetype' %}
+{% if ui_font.path contains '.woff2' %}{% assign ui_font_format = 'woff2' %}{% elsif ui_font.path contains '.woff' %}{% assign ui_font_format = 'woff' %}{% endif %}
+{% if post_title_font.path contains '.woff2' %}{% assign post_title_font_format = 'woff2' %}{% elsif post_title_font.path contains '.woff' %}{% assign post_title_font_format = 'woff' %}{% endif %}
+{% if header_font.path contains '.woff2' %}{% assign header_font_format = 'woff2' %}{% elsif header_font.path contains '.woff' %}{% assign header_font_format = 'woff' %}{% endif %}
+{% if body_font.path contains '.woff2' %}{% assign body_font_format = 'woff2' %}{% elsif body_font.path contains '.woff' %}{% assign body_font_format = 'woff' %}{% endif %}
+
 {% if ui_font.family and ui_font.path %}
+{% if ui_font.weights %}
+{% for ui_weight in ui_font.weights %}
 @font-face {
   font-family: '{{ ui_font.family }}';
-  src: url('{{ ui_font.path | relative_url }}') format('truetype');
+  src: url('{{ ui_weight[1] | relative_url }}') format('woff');
+  font-weight: {{ ui_weight[0] }};
   font-display: swap;
 }
+{% endfor %}
+{% else %}
+@font-face {
+  font-family: '{{ ui_font.family }}';
+  src: url('{{ ui_font.path | relative_url }}') format('{{ ui_font_format }}');
+  font-display: swap;
+}
+{% endif %}
 {% endif %}
 
 {% if post_title_font.family and post_title_font.path %}
 @font-face {
   font-family: '{{ post_title_font.family }}';
-  src: url('{{ post_title_font.path | relative_url }}') format('truetype');
+  src: url('{{ post_title_font.path | relative_url }}') format('{{ post_title_font_format }}');
   font-display: swap;
 }
 {% endif %}
@@ -36,7 +56,7 @@
 {% if header_font.family and header_font.path %}
 @font-face {
   font-family: '{{ header_font.family }}';
-  src: url('{{ header_font.path | relative_url }}') format('truetype');
+  src: url('{{ header_font.path | relative_url }}') format('{{ header_font_format }}');
   font-display: swap;
 }
 {% endif %}
@@ -44,7 +64,7 @@
 {% if body_font.family and body_font.path %}
 @font-face {
   font-family: '{{ body_font.family }}';
-  src: url('{{ body_font.path | relative_url }}') format('truetype');
+  src: url('{{ body_font.path | relative_url }}') format('{{ body_font_format }}');
   font-display: swap;
 }
 {% endif %}
