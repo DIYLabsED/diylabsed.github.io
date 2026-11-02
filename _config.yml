@@ -118,11 +118,11 @@ fonts:
     fallback: "Lato, Microsoft Yahei, sans-serif"
   header:
     family: "Iosevka Etoile"
-    path: "/assets/fonts/PkgTTC-IosevkaEtoile-34.9.1/IosevkaEtoile-Regular.woff"
+    path: "/assets/fonts/PkgTTC-IosevkaEtoile-34.9.1/IosevkaEtoile-Light.woff"
     fallback: "Lato, Microsoft Yahei, sans-serif"
   body:
     family: "Iosevka Aile"
-    path: "/assets/fonts/PkgTTC-IosevkaAile-34.9.1/IosevkaAile-Regular.woff"
+    path: "/assets/fonts/PkgTTC-IosevkaAile-34.9.1/IosevkaAile-Light.woff"
     fallback: "Source Sans Pro, Microsoft Yahei, sans-serif"
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.

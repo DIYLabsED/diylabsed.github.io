@@ -17,6 +17,8 @@ Text, images, and videos on this site are licensed under the [CC BY 4.0](https:/
 
 TL;DR: You can share, modify, and adapt the blogs and images on this site, as long as you attribute them to me. Read the license for details.
 
+The icon art is [this fanart of Nere](https://x.com/Memo_Foamcake/status/2024801553908158942) by [Memo_Foamcake](https://x.com/Memo_Foamcake).
+
 ### Software
 This website uses a modified version of [Chirpy](https://github.com/cotes2020/jekyll-theme-chirpy), which is licensed under the [MIT](https://spdx.org/licenses/MIT.html) license. Changes made to Chirpy's source code by me are also licensed under the [MIT](https://spdx.org/licenses/MIT.html) license.
 
@@ -27,9 +29,5 @@ This website includes [pikchr-wasm](https://github.com/fabiospampinato/pikchr-wa
 The 404 page uses the ASCII art cat from [ascii.rest](https://ascii.rest/cat/) by [bas3line](https://github.com/bas3line).
 
 ### Fonts
-This website uses the following fonts, all licensed under the [Open Font License](https://openfontlicense.org/open-font-license-official-text/):
-- UI: [Source Sans 3](https://fonts.google.com/specimen/Source+Sans+3)
-- Headings: [EB Garamond](https://fonts.google.com/specimen/EB+Garamond)
-- Body Text: [Lato](https://fonts.google.com/specimen/Lato)
-
-The icon art is [this fanart of Nere](https://x.com/Memo_Foamcake/status/2024801553908158942) by [Memo_Foamcake](https://x.com/Memo_Foamcake).
+This website uses Iosevka, licensed under the [Open Font License](https://openfontlicense.org/open-font-license-official-text/).
+https://github.com/be5invis/iosevka
