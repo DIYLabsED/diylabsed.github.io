@@ -107,6 +107,12 @@ h5,
   font-family: var(--site-font-body);
 }
 
+// Keep footnote text visually subordinate to the main article text.
+.content .footnotes {
+  font-size: 0.85em;
+  font-weight: 300;
+}
+
 .pikchr-diagram {
   margin: 1.5rem auto;
   text-align: center;
