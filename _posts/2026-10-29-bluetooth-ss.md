@@ -8,7 +8,7 @@ tags: [sound, audio, phillips, hardware]
 unlisted: true
 ---
 
-![Reassembled sound system](/assets/img/post_imgs/ss_bl_mod/ss_assembled.jpg){: width="972" height="589" .w-50}
+![Reassembled sound system](/assets/img/post_imgs/ss_bl_mod/ss_assembled.jpg)
 _Reassembled sound system, with a brand-new input method!_
 
 ## Introduction
@@ -23,8 +23,8 @@ Our original plan to add Bluetooth input to the sound system was to simply plug 
 
 The solution we ended up settling on was to install a generic Bluetooth audio decoder inside the sound system itself, and power it from the sound system's own power supply. We didn't plan on using the sound system through anything other than Bluetooth, so soldering the output of the module directly to the RCA jacks that take in the auxiliary audio input - at the cost of not being able to use the auxiliary port again - was acceptable.
 
-![Bluetooth audio decoder](/assets/img/post_imgs/ss_bl_mod/ss_bl_module.jpg){: width="972" height="589" .w-50}
-_Generic Bluetooth audio decoder_
+![Bluetooth audio decoder](/assets/img/post_imgs/ss_bl_mod/ss_bl_module.jpg)
+_The Bluetooth audio decoder I ended up buying_
 
 The Bluetooth module I ended up getting is [this one](https://robu.in/product/amplifier-bluetooth-board-audio-with-usb-tf-card-with-microphone/), though the specific board doesn't matter - any board that can take in audio via Bluetooth and output it via an AUX cord should work.
 
@@ -44,9 +44,19 @@ This design on its own is fine, however disassembly is made significantly harder
 ## Internal Structure 
 Once you're past all that, the internal electronics are quite clever. On the left side, near the bottom, a multi-tap transformer steps down the AC input. Mounted above it is the FM radio daughterboard. On the right side of the unit, the main motherboard is mounted. A series of voltage regulators and transistors are also bolted to a large metal heatsink, that sits inside a cavity in the back panel. A fan sits above it, pushing air over the fins. On a frame, suspended above the center, sits the cassette reader, with a panel on the top of the device that lets you access it. Near the front, the CD daughterboard is mounted. Connected to it is the front panel UI daughterboard.[^fpbuttons][^fpir]
 
-TODO: photos
+![Right side of the core](/assets/img/post_imgs/ss_bl_mod/ss_right_lit.jpg)
+_Right side of the device. The front of the device is towards the left of the image, and the top of the device is towards the bottom of the image. The board visible is the motherboard. The cassette reader's red frame is visible._
+
+![Left side of the core](/assets/img/post_imgs/ss_bl_mod/ss_left_angled.jpg)
+_Left side of the device. The front of the device is towards the left of the image, and the top of the device is towards the top of the image. Towards the front is the CD daughterboard. Towards the top is the FM decoder daughterboard. Towards the bottom is the power supply daughterboard, with plastic over the high-voltage input pads._
+
+![Top of the module](/assets/img/post_imgs/ss_bl_mod/ss_ori_top.jpg)
+_Top side of the device. The front of the device is towards the left of the image. The cassette reader's access panel is visible. Towards the front, the CD reader's eject button is visible._
 
 There's not a lot of free room inside the device, pretty much all of it is filled with PCBs and ribbon cables. The only spare spot I found to mount the Bluetooth module was on the heatsink, which has a large, flat, empty spot. Mounting additional things onto heatsinks is generally not a good idea, since the heatsink can get hot and damage the adhesive holding the module, or the module itself. However, in this case, I ruled it was fine since the components mounted onto it wouldn't generate enough heat to warm up the large and thick heatsink significantly.
+
+![Left side of the core](/assets/img/post_imgs/ss_bl_mod/ss_original_bl_board_mounting.jpg)
+_Bluetooth module mounted to the heatsink._
 
 Due to the problem mentioned in the next section, I ended up having to remove the Bluetooth audio module, and while doing so, I realized I could mount it onto the cassette reader's frame. I wanted to remove the cassette reader to repair it anyway. The reader hardware subassembly[^tapereader] sits on a plastic frame, which fits onto the metal frame at the bottom, and exposes an access panel at the top, through which you can insert or remove tapes.
 
@@ -67,7 +77,8 @@ At this point, I had a suspicion that the voltage rail itself might be noisy, co
 
 I have a collection of power supplies of various voltages, currents, sizes, and packages. I ended up going with an awkwardly-shaped USB charger, which I wasn't likely to use anywhere else. As a bonus, it was also really weak, only outputting 500 milliamps (the bare minimum of the USB spec!). I tried out a new technique[^pswiring] for attaching wires to the plug pins directly, rather than opening up the power supply. I then soldered these wires to the pads where the AC input cable is soldered. The most sensible place I could figure out for the awkwardly-shaped power supply ended up being the heatsink, taking the place of the Bluetooth module. I moved the Bluetooth module to the cassette reader's frame, and it can be accessed by opening the cassette reader's top access panel. As a bonus, since nothing's soldered directly to the Bluetooth module, we can unplug the audio jack from it, and connect it to something else, if we ever end up needing to send audio directly to the sound system.
 
-TODO: photos
+![Power supply mounting](/assets/img/post_imgs/ss_bl_mod/ss_power_supply_mounting.jpg)
+_Power supply mounted to the heatsink, wired to the AC input. USB cable powering the Bluetooth module sticks out the top._
 
 <br>
 
@@ -78,10 +89,38 @@ After carefully tetris-ing the internals back onto their frame, wrapping it in t
 
 I think it turned out quite well. We've used the sound system for about two weeks by now, and it's been working perfectly fine.
 
+![Bluetooth module final mounting](/assets/img/post_imgs/ss_bl_mod/ss_audio_board_mounting.jpg)
+_Bluetooth module in its final place, the cassette reader frame._
+
 <br>
 
 ## Additional Photos
-TODO
+![Audio cable soldered](/assets/img/post_imgs/ss_bl_mod/ss_audio_cable_solder.jpg)
+_Audio cable soldered to the RCA jack pads._
+
+![Hiding!](/assets/img/post_imgs/ss_bl_mod/ss_bl_board_hiding.jpg)
+_The Bluetooth module, hiding in its original mounting spot!_
+
+![Cassete module](/assets/img/post_imgs/ss_bl_mod/ss_casette_unit.jpg)
+_The cassette reader subassembly, flipped upside-down._
+
+![Motherboard](/assets/img/post_imgs/ss_bl_mod/ss_mb.jpg)
+_A view of the motherboard. The front of the device is towards the right of the image. Towards the back, various voltage regulators are mounted to the heatsink. Towards the right, the CD reader daughterboard._
+
+![Front of the power supply](/assets/img/post_imgs/ss_bl_mod/ss_power_supply_front.jpg)
+_The front side of the power supply daughterboard._
+
+![New power supply folded](/assets/img/post_imgs/ss_bl_mod/ss_power_supply_folded.jpg)
+_New power supply with soldered wires, with the prongs folded._
+
+![New power supply unfolded](/assets/img/post_imgs/ss_bl_mod/ss_power_supply_unfolded.jpg)
+_Ditto, with the prongs unfolded._
+
+![FM daughterboard backs](/assets/img/post_imgs/ss_bl_mod/ss_radio_board_back.jpg)
+_The back of the FM decoder daughterboard.__
+
+![FM daughterboard front](/assets/img/post_imgs/ss_bl_mod/ss_radio_board_front.jpg)
+_The front of the FM decoder daughterboard._
 
 <br>
 
